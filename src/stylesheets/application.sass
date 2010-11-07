@@ -1,5 +1,14 @@
 @import "compass/css3"
 
+// Entweder:
+// include separate @font-face-Kits
+@mixin fontsrc($name, $path)
+  +font-face($name, font-files("#{$path}.woff", woff, "#{$path}.ttf", truetype, "#{$path}.otf", opentype, "#{$path}.svg", svg))
+
+@include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
+
+//  Oder
+// include complete static awesome-fontstack 
 @import url('awesome-fonstack.css')
 
 body
