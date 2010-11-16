@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MEgalopolis Extra";
+  src: local("☺"), url('//fonts/MEgalopolisExtraRegular/megalopolisextra-webfont.woff') format('woff'), url('//fonts/MEgalopolisExtraRegular/megalopolisextra-webfont.ttf') format('truetype'), url('//fonts/MEgalopolisExtraRegular/megalopolisextra-webfont.otf') format('opentype'), url('//fonts/MEgalopolisExtraRegular/megalopolisextra-webfont.svg') format('svg');
+}
+
+@import url('awesome-fonstack.css');
+/* line 14 */
+body {
+  background: #f9f9f9;
+  color: #333333;
+  font-family: Kontrapunkt;
+  font-size: 16px;
+  font-line-height: 22px;
+}
+
+/* line 22 */
+h1, h2 {
+  font-family: TitilliumText22L;
+}
+
+/* line 26 */
+h1 {
+  text-align: center;
+  font-size: 48px;
+}
+/* line 30 */
+h1 small {
+  font-size: 14px;
+  border-bottom: 1px solid #bbbbbb;
+}
