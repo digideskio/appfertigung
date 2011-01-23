@@ -1,24 +1,56 @@
 @import "compass/css3"
-
-// Entweder:
-// include separate @font-face-Kits
-@mixin fontsrc($name, $path)
-  +font-face($name, font-files("#{$path}.woff", woff, "#{$path}.ttf", truetype, "#{$path}.otf", opentype, "#{$path}.svg", svg))
-
-@include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
-
-//  Oder
+@import "compass/reset/utilities"
+@import "compass/utilities/general/min"
+@import 'lib'
 // include complete static awesome-fontstack 
+// Todo: Achtung, hierwerden etliche Fonts eingebunden - ausmisten!
 @import url('awesome-fonstack.css')
 
-body
-  background: #f9f9f9
-  color: #333
-  font: 
-    family: Kontrapunkt
-    size: 16px
-    line-height: 22px
+// Oder:
+// @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
+  
+// colors
+$bg_gradient_start: #B5B7BD
+$bg_gradient_stop: #ffffff
 
+// instead of a global reset:
+*
+  margin: 0
+  padding: 0
+  border: 0 solid
+  outline: 0
+
++reset-html5
+
+
+html, body
+  height: 100%
+  
+body
+  +linear-gradient(color-stops($bg_gradient_start 15%, $bg_gradient_stop 40%, $bg_gradient_stop 100%))
+  background-color: $bg_gradient_stop
+  font-family: Kontrapunkt
+  +font-metrics(16px, 24px)
+
+header
+  +linear-gradient(color-stops(#505462, #1d2335))
+  height: 130px
+  border-bottom: 2px solid white
+
+#logo
+  +inline-block
+  margin: 10px 0 0 40px
+  
+section#main
+  width: 900px
+  background: darken(#eef5fc, 10%)
+  +opacity(0.75)
+  padding-top: 50px
+  margin:
+    left: 230px
+  position: relative
+  top: -50px
+     
 h1, h2
   font:
     family: TitilliumText22L

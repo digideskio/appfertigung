@@ -1,12 +1,13 @@
 %header
   %hgroup
-    %h1 
-      Deftly Ding
-    %h2
-      %small craftmanship – architecture - design
-    %h2 a collaboration of web professionals   
-  
+    %a#logo{:href => "/"}
+      = img 'logo.png', :alt => "Appfertigung" 
+      %small
+        [app dafür!]    
+    
 %section#main
+      
+  %h1 Headline
   
   %p
     :markdown
@@ -15,20 +16,18 @@
   %p
     Wir mögen das Internet. 
 
-%h2 Wir sind
+  %h2 Die Abfertigung sind:
 
-%ul
-  %li
-    Dennis Blöte
-  %li
-    Arbo von Monkiewitsch
-  %li
-    Eckhard Rotte
-  
-
+  %ul
+    %li
+      Dennis Blöte
+    %li
+      Arbo von Monkiewitsch
+    %li
+      Eckhard Rotte
     
    
-#footer
-  
+%footer
+  %nav.meta 
   
         
