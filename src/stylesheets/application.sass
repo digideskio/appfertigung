@@ -10,9 +10,10 @@
 // @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
   
 // colors
-$bg_gradient_start: #B5B7BD
+$bg_gradient_start: #b5b7bd
 $bg_gradient_stop: #ffffff
 
+$dark_bg: #1d2335
 // instead of a global reset:
 *
   margin: 0
@@ -21,7 +22,8 @@ $bg_gradient_stop: #ffffff
   outline: 0
 
 +reset-html5
-
+ul#appfertiger
+  list-style: none
 
 html, body
   height: 100%
@@ -33,9 +35,11 @@ body
   +font-metrics(16px, 24px)
 
 header
-  +linear-gradient(color-stops(#505462, #1d2335))
+  +linear-gradient(color-stops(lighten($dark_bg, 12%), $dark_bg))
   height: 130px
-  border-bottom: 2px solid white
+  border:
+    bottom: 2px solid white
+    top:  2px solid #0099FF
 
 #logo
   +inline-block
@@ -43,9 +47,10 @@ header
   
 section#main
   width: 900px
+  +min-height(60%)
   background: darken(#eef5fc, 10%)
   +opacity(0.75)
-  padding-top: 50px
+  padding: 50px 30px
   margin:
     left: 230px
   position: relative
@@ -61,4 +66,9 @@ h1
   small
     font-size: 14px
     border-bottom: 1px solid #bbb
+    
+footer
+  background: $dark_bg
+  padding: 20px
+  #contact  
     
