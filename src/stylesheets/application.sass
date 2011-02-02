@@ -10,10 +10,10 @@
 // @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
   
 // colors
-$bg_gradient_start: #b5b7bd
-$bg_gradient_stop: #ffffff
-
-$dark_bg: #1d2335
+$body_gradient_start: #b5b7bd
+$body_gradient_stop: #ffffff
+$dark_bg: #036
+$spotcolor: #6c3
 // instead of a global reset:
 *
   margin: 0
@@ -29,24 +29,28 @@ html, body
   height: 100%
   
 body
-  +linear-gradient(color-stops($bg_gradient_start 15%, $bg_gradient_stop 40%, $bg_gradient_stop 100%))
-  background-color: $bg_gradient_stop
+  +linear-gradient(color-stops($body_gradient_start 15%, $body_gradient_stop 40%, $body_gradient_stop 100%))
+  background-color: $body_gradient_stop
   font-family: Kontrapunkt
   +font-metrics(16px, 24px)
 
 header
-  +linear-gradient(color-stops(lighten($dark_bg, 12%), $dark_bg))
+  +linear-gradient(color-stops($dark_bg, lighten($dark_bg, 12%)))
   height: 130px
   border:
     bottom: 2px solid white
-    top:  2px solid #0099FF
+    top:  4px solid $dark_bg
 
 #logo
   +inline-block
   margin: 10px 0 0 40px
+
+#claim
+  color: white
+    
   
 section#main
-  width: 900px
+  width: 700px
   +min-height(60%)
   background: darken(#eef5fc, 10%)
   +opacity(0.75)
@@ -69,6 +73,6 @@ h1
     
 footer
   background: $dark_bg
+  color: white
   padding: 20px
-  #contact  
     
