@@ -102,6 +102,7 @@ ul#appfertiger
   list-style: none    
     
 footer
+  +clearfix
   background: $dark
   overflow: auto
   color: $light
@@ -112,15 +113,15 @@ footer
   .col
     +min-width(215px)
     float: left
-    margin: 0 0 30px 40px
+    margin: 0 0 0 40px
+  #contact
+    margin-left: 0
   h3
     margin: 0 0 7px 0
     padding: 0 30px 0 3px
     border-bottom: 1px dotted $medium
     font-weight: normal
-    +text-shadow(darken($dark, 12%), 1px, 1px, 2px)
-  #contact
-    margin-left: 0
+    color: white
   ul
     margin-left: 16px
 
