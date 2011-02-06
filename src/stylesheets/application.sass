@@ -49,6 +49,11 @@ h1
     font-size: 14px
     border-bottom: 1px solid #bbb
 
+small a
+  text-decoration: none
+  &:after
+    content: " »"
+
 #header
   +linear-gradient(color-stops($dark, lighten($dark, 14%)))
   height: 140px
