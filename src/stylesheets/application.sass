@@ -16,6 +16,7 @@ $dark: #036
 $medium: #9dbdc6
 $light: #daeaef
 $spotcolor: #ff3d2e
+$brace_color: #272F32
 
 =headline
   font-family: TitilliumText22L
@@ -31,13 +32,16 @@ $spotcolor: #ff3d2e
 
 body
   height: 100%
-  
-body
   +linear-gradient(color-stops($medium 15%, $light 60%, white 100%))
   +font-metrics(16px, 24px)
   border-top: 5px solid $brace_color
   background-color: $light
   font-family: Kontrapunkt
+
+small a
+  text-decoration: none
+  &:after
+    content: " »"
 
 header
   +linear-gradient(color-stops($dark, lighten($dark, 14%)))
@@ -75,6 +79,7 @@ header
   
 #panel
   width: 700px
+  background: $light
   +min-height(60%)
   +box-shadow($dark, 0, 0, 5px)
   +border-radius(7px)
@@ -104,17 +109,16 @@ footer
   a
     +hover-link
     +link-colors($medium, $spotcolor)
+  .col
+    +min-width(215px)
+    float: left
+    margin: 0 0 30px 40px
   h3
     margin: 0 0 7px 0
     padding: 0 30px 0 3px
     border-bottom: 1px dotted $medium
     font-weight: normal
     +text-shadow(darken($dark, 12%), 1px, 1px, 2px)
-    
-  .col
-    +min-width(215px)
-    float: left
-    margin: 0 0 30px 40px
   #contact
     margin-left: 0
   ul
