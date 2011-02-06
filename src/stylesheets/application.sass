@@ -16,6 +16,7 @@ $dark: #036
 $medium: #9dbdc6
 $light: #daeaef
 $spotcolor: #ff3d2e
+$brace_color: #272F32
 
 =headline
   font-family: TitilliumText22L
@@ -32,9 +33,7 @@ $spotcolor: #ff3d2e
 body
   +linear-gradient(color-stops($medium 15%, $light 60%, white 100%))
   +font-metrics(16px, 24px)
-  border:
-    top: 5px solid #272F32
-    bottom: 5px solid #272F32
+  border-top: 5px solid $brace_color
   background-color: $light
   font-family: Kontrapunkt
 
@@ -88,8 +87,7 @@ small a
   width: 700px
   background: $light
   padding: 50px 30px
-  margin:
-    left: 260px
+  margin-left: 260px
   position: relative
   top: -45px
 
@@ -105,7 +103,7 @@ ul#appfertiger
   .col
     +min-width(215px)
     float: left
-    margin: 0 0 30px 40px
+    margin: 0 0 0 40px
   #contact
     margin-left: 0
   ul
@@ -118,12 +116,13 @@ ul#appfertiger
     padding: 0 30px 0 3px
     border-bottom: 1px dotted $medium
     font-weight: normal
+    color: #FFF
 
 #bottom
   padding: .5em 0
   text-align: center
   color: #FFF
-  background: #272F32
+  background: $brace_color
   a
     +link-colors(#FFF, $spotcolor)
     text-decoration: none
