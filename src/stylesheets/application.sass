@@ -1,6 +1,7 @@
 @import "compass/css3"
 @import "compass/reset/utilities"
 @import "compass/utilities/general/min"
+@import "compass/utilities/links"
 @import 'lib'
 // include complete static awesome-fontstack 
 // Todo: Achtung, hierwerden etliche Fonts eingebunden - ausmisten!
@@ -10,10 +11,16 @@
 // @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
   
 // colors
-$body_gradient_start: #b5b7bd
-$body_gradient_stop: #ffffff
-$dark_bg: #036
-$spotcolor: #6c3
+// http://kuler.adobe.com/#themeID/1183442
+$dark: #036  //#272f32
+$medium: #9dbdc6
+$light: #daeaef
+$spotcolor: #ff3d2e
+
+=headline
+  font:
+    family: TitilliumText22L
+  color: $spotcolor
 // instead of a global reset:
 *
   margin: 0
@@ -29,22 +36,41 @@ html, body
   height: 100%
   
 body
-  +linear-gradient(color-stops($body_gradient_start 15%, $body_gradient_stop 40%, $body_gradient_stop 100%))
-  background-color: $body_gradient_stop
+  +linear-gradient(color-stops($medium 15%, $light 60%, white 100%))
+  background-color: $light
   font-family: Kontrapunkt
   +font-metrics(16px, 24px)
 
 header
-  +linear-gradient(color-stops($dark_bg, lighten($dark_bg, 12%)))
-  height: 130px
+  +linear-gradient(color-stops($dark, lighten($dark, 14%)))
+  height: 140px
   border:
-    bottom: 2px solid white
-    top:  4px solid $dark_bg
+    bottom: 2px solid $medium
+    top:  2px solid $medium
 
 #logo
   +inline-block
-  margin: 10px 0 0 40px
-
+  +unstyled-link
+  +headline
+  +text-shadow(darken($light, 12%), 1px, 1px, 2px)
+  color: $light
+  margin: 25px 0 0 40px
+  font:
+    size: 42px
+    weight: bold
+  line-height: 1.2  
+  small
+    +text-shadow(none)
+    display: block
+    color: $medium
+    font:
+      size: 16px
+  +transition-property(text-shadow)
+  +transition-duration(0.3s)
+  +transition-timing-function(ease-in)    
+  &:hover
+    +text-shadow(darken($light, 22%), 4px, 4px, 8px)
+      
 #claim
   color: white
     
@@ -52,17 +78,18 @@ header
 section#main
   width: 700px
   +min-height(60%)
-  background: darken(#eef5fc, 10%)
-  +opacity(0.75)
+  background: $light
+  +box-shadow($dark, 0, 0, 5px)
+  +border-radius(3px)
+  +opacity(0.85)
   padding: 50px 30px
   margin:
-    left: 230px
+    left: 260px
   position: relative
-  top: -50px
+  top: -45px
      
 h1, h2
-  font:
-    family: TitilliumText22L
+  +headline
 
 h1 
   font:
@@ -72,7 +99,28 @@ h1
     border-bottom: 1px solid #bbb
     
 footer
-  background: $dark_bg
-  color: white
+  background: $dark
+  overflow: auto
+  color: $light
+  border: 
+    top: 1px solid $spotcolor
   padding: 20px
+  a
+    +hover-link
+    +link-colors($medium, $light)
+  h3
+    margin: 0 0 7px 0
+    padding: 0 30px 0 3px
+    border-bottom: 1px dotted $medium
+    font-weight: normal
+  .col
+    +min-width(240px)
+    float: left
+    margin: 0 40px 30px 0
+    display: inline-block
+  #contact
+    width: 280px
+  #about_us
+    width: 240px
+
     

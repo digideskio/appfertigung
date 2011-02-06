@@ -1,9 +1,9 @@
 %header
   %hgroup
     %a#logo{:href => "/"}
-      = img 'logo.png'
+      die Appfertigung
       %small#claim
-        Software, handgemacht    
+        gute Software, handgemacht    
     
 %section#main
       
@@ -34,26 +34,28 @@
 
   %h2
     [Projekte]
-       
         
    
 %footer
-  .col
+  .col.vcard
     %h3
       Kontakt
-    %address
-      :markdown
-        Die Appfertigung 
-        Hansator 1 
-        28217 Bremen
-        mail@appfertigung.com
-  .col
+    %address.adr
+      %span.org Die Appfertigung
+      %br 
+      %span.street-address Hansator 1 
+      %br 
+      %span.postal-code 28217 
+      %span.locality Bremen
+      %br
+      %a.email{:href => 'mailto:mail@appfertigung.com'} mail@appfertigung.com
+  .col.vcard
     %h3
       Arbo von Monkiewitsch    
-  .col
+  .col.vcard
     %h3
       Dennis Blöte
-  .col
+  .col.vcard
     %h3
       Eckhard Rotte
     
