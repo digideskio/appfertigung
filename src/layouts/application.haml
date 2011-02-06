@@ -10,4 +10,8 @@
     /[if IE]
       = javascripts "http://html5shiv.googlecode.com/svn/trunk/html5.js"
   %body
-    = yield
+    = partial('header')
+    #main
+      = yield
+    = partial('footer')
+    = partial('google_analytics')

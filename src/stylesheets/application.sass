@@ -29,9 +29,6 @@ $spotcolor: #ff3d2e
   outline: 0
 
 +reset-html5
-
-html, body
-  height: 100%
   
 body
   +linear-gradient(color-stops($medium 15%, $light 60%, white 100%))
@@ -41,6 +38,16 @@ body
     bottom: 5px solid #272F32
   background-color: $light
   font-family: Kontrapunkt
+
+h1, h2
+  +headline
+
+h1 
+  font:
+    size: 48px
+  small
+    font-size: 14px
+    border-bottom: 1px solid #bbb
 
 #header
   +linear-gradient(color-stops($dark, lighten($dark, 14%)))
@@ -82,16 +89,6 @@ body
     left: 260px
   position: relative
   top: -45px
-     
-h1, h2
-  +headline
-
-h1 
-  font:
-    size: 48px
-  small
-    font-size: 14px
-    border-bottom: 1px solid #bbb
 
 ul#appfertiger
   list-style: none
