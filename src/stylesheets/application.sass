@@ -35,9 +35,7 @@ body
 body
   +linear-gradient(color-stops($medium 15%, $light 60%, white 100%))
   +font-metrics(16px, 24px)
-  border:
-    top: 5px solid #272F32
-    bottom: 5px solid #272F32
+  border-top: 5px solid $brace_color
   background-color: $light
   font-family: Kontrapunkt
 
@@ -78,7 +76,6 @@ header
 #panel
   width: 700px
   +min-height(60%)
-  background: $light
   +box-shadow($dark, 0, 0, 5px)
   +border-radius(7px)
   +opacity(0.85)
@@ -123,4 +120,11 @@ footer
   ul
     margin-left: 16px
 
-    
+#bottom
+  padding: .5em 0
+  text-align: center
+  color: #FFF
+  background: $brace_color
+  a
+    +link-colors(#FFF, $spotcolor)
+    text-decoration: none
