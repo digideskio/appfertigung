@@ -1,9 +1,7 @@
-
-= fontsrc($name, $path)
-  +font-face($name, font-files("#{$path}.woff", woff, "#{$path}.ttf", truetype, "#{$path}.otf", opentype, "#{$path}.svg", svg))
-
 // @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
 
+= fontsrc($name, $path)
+  +font-face($name, font-files("#{$path}.woff", woff, "#{$path}.ttf", truetype, "#{$path}.otf", opentype, "#{$path}.svg#ab12c33", svg))
 
 =line-height($line-height, $font-size)
   line-height: $line-height / $font-size
