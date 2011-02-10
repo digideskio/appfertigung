@@ -21,8 +21,6 @@
 @include fontsrc("KontrapunktLightItalic", "/fonts/Kontrapunkt/Kontrapunkt-LightItalic-webfont")
 
 
-
-
 // colors
 // http://kuler.adobe.com/#themeID/1183442
 
@@ -35,7 +33,7 @@ $brace_color: #272F32
 =headline
   font-family: TitilliumText22L
   color: $spotcolor
-
+  font-weight: normal
 *
   margin: 0
   padding: 0
@@ -112,14 +110,20 @@ h1
 h2
   margin-top: 22px
 
+h3
+  font-weight: normal
+  
 #team
   ul
+    margin: 20px 0
     list-style: none
     li
       +clearfix
       img
         float: left
         margin: 0 1em 1em 0
+        border: 8px solid white
+        +box-shadow($dark, 0, 0, 4px)
     
 footer
   +clearfix
@@ -127,7 +131,6 @@ footer
   overflow: auto
   color: $light
   padding: 20px
-  font-family: KontrapunktBold
   a
     +hover-link
     +link-colors($medium, $spotcolor)
