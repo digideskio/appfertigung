@@ -1,7 +1,7 @@
 
 %section#intro
   %h3
-    Die Appfertigung ist ein Team von Web- und Software-Professionals
+    Die Appfertigung ist ein Netzwerk von Web- und Software-Professionals
   
   %h2 Wer wir sind und was wir tun
   %p  
@@ -34,24 +34,94 @@
       %img{ :src => '/images/arbo_von_monkiewitsch.jpg', :alt => "Arbo von Monkiewitsch" }
       Arbo von Monkiewitsch is a Software Developer from Bremen/Germany
       currently working with JEE/Spring and Ruby on Rails. I'm interested
-      in all kinds of programming languages and agile development. 
+      in all kinds of programming languages and agile development.
+      %ul.profiles
+        %li
+          %a{:href => "https://github.com/arbovm"} GitHub
+        %li
+          %a{:href => "https://twitter.com/arbovm"} Twitter
+        %li
+          %a{:href => "https://www.facebook.com/arbovm"} Facebook
+        %li
+          %a{:href => "https://www.xing.com/profile/Arbo_vonMonkiewitsch"} XING
     %li
       %img{ :src => '/images/dennis_bloete.jpg', :alt => "Dennis Blöte" }
       Dennis Blöte ist Software-Entwickler und realisiert seit 7 Jahren
       Projekte im Bereich Webentwicklung sowie Anwendungen für mobile
-      Endgeräte. Seine Tätigkeitsschwerpunkte sind die Anwendungsentwicklung
+      Endgeräte. Seine Schwerpunkte sind die Anwendungsentwicklung
       mit Ruby on Rails, JavaScript und verschiedensten Datenbanksystemen.
       Neben seinen beruflichen Auftragstätigkeiten betreibt er mehrere
       eigene Projekte und engagiert sich im Bereich der Open Source-Software.
+      %ul.profiles
+        %li
+          %a{:href => "https://github.com/dbloete"} GitHub
+        %li
+          %a{:href => "https://twitter.com/dbloete"} Twitter
+        %li
+          %a{:href => "https://www.facebook.com/dbloete"} Facebook
+        %li
+          %a{:href => "https://www.xing.com/profile/Dennis_Bloete"} XING
+        %li
+          %a{:href => "http://dennisbloete.de"} Website
     %li
       %img{ :src => '/images/eckhard_rotte.jpg', :alt => "Eckhard Rotte" }
       Eckhard Rotte ist Software-Entwickler mit den Schwerpunkten Ruby on Rails und Frontend-Entwicklung. 
       Er entwickelt seit 1997 Webanwendungen. 
-       
+      %ul.profiles
+        %li
+          %a{:href => "https://github.com/erotte"} GitHub
+        %li
+          %a{:href => "https://twitter.com/erotte"} Twitter
+        %li
+          %a{:href => "https://www.facebook.com/erotte"} Facebook
+        %li
+          %a{:href => "https://www.xing.com/profile/Eckhard_Rotte"} XING
+
 %section#projects
   %h2 Beispiele
   %ul
-    %li Die ZEIT Shop
-    %li Shoesizefinder
-    %li Zendome
+    %li.web
+      .info
+        %header
+          %h3= link_to "DIE ZEIT Webshop", "http://shop.zeit.de/"
+        .content
+          %p
+            Die Weiterentwicklung und Betreuung des #{link_to "Webshop für DIE ZEIT", "http://shop.zeit.de/"}
+            war mein erstes Projekt
+            im Rahmen der Festanstellung bei der #{link_to "neuland bremen GmbH", "http://neuland-bfi.de/"}.
+            Sowohl der Shop als auch das Administrationsbackend wurden mit Ruby on Rails entwickelt.
+            Interessante Aufgabenstellungen waren dabei unter anderem die Anbindung von Drittanbietern
+            über Webservice-Schnittstellen und die Integration des Payment-Gateways.
+          %p.task
+            Backend-Entwicklung mit Ruby on Rails und MySQL, REST- und SOAP-Webservices,
+            Frontend-Entwicklung mit HTML und CSS
+          %p.context
+            Festanstellung bei #{link_to "neuland bremen GmbH", "http://neuland-bfi.de/"}
+          %p.period
+            März 2008 - Mai 2009
+      .meta.veiled
+        %img{ :src => '/images/portfolio/zeitshop.jpg', :alt => "DIE ZEIT Webshop" }
+        .veil
+    %li.iphone.invert
+      .info
+        %header
+          %h3= link_to "ZENDOME", "http://itunes.apple.com/de/app/zendome/id353137169?mt=8"
+        .content
+          %p
+            Mobil, sicher und zukunftsweisend - so macht Eventmanagement Spaß: Als einziger Hersteller mobiler Event-Architektur
+            bietet die #{link_to "ZENDOME GmbH", "http://zendome.de/"} eine Planungshilfe als iPhone-Applikation an.
+          %p
+            Die Anwendung ermöglicht es, die verschiedenen geodätischen Dome zur ZENDOME.domescapes zu kombinieren und damit Ihre
+            Veranstaltung vordenken. Ist eine Planung erstellt lässt sich schnell und unkompliziert ein Angebot anfordern.
+          %p
+            Die Anwendung ist kostenlos #{link_to "im iTunes App Store erhältlich", "http://itunes.com/apps/zendome"}.
+          %p.task
+            Native Software-Entwicklung mit Objective-C, Xcode und Interface Builder
+          %p.context
+            Auftragsarbeit für die #{link_to "ZENDOME GmbH", "http://zendome.de/"}
+          %p.period
+            Januar 2010
+      .meta.veiled
+        %img{ :src => '/images/portfolio/zendome_iphone.jpg', :alt => "ZENDOME iPhone App" }
+        .veil
 
