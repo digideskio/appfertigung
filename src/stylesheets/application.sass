@@ -27,7 +27,7 @@
 $light: #F2F2ED
 $medium: #9dbdc6
 $dark: #06262B
-$spotcolor: #00A0C6
+$spotcolor: #485956
 $brace_color: #000
 
 =headline
@@ -44,19 +44,25 @@ $brace_color: #000
 +reset-html5
 
 body
-  height: 100%
   +font-metrics(16px, 24px)
+  height: 100%
+  border-top: .5em solid $brace_color
+  border-bottom: 1em solid $brace_color
   background-color: $light
   font-family: GentiumBasicRegular
+
+section
+  margin-top: 2em
 
 h1, h2
   +headline
 
-h1 
-  font-size: 48px
+h1
+  font-size: 3em
+  
 h2
-  margin-top: 22px
-
+  font-size: 1.5em
+  
 h3
   font-weight: normal
 
@@ -69,14 +75,13 @@ small a
     content: " »"
 
 #header
-  border-top: 8px solid $brace_color
-  padding: 60px 0 20px 0
+  padding-top: 4.5em
 
 #logo
   display: block
-  width: 368px
-  height: 107px
-  margin: 0 0 0 90px
+  width: 359px
+  height: 111px
+  margin: 0 0 0 94px
   background: url(/images/appfertigung_software_handgemacht.png) no-repeat
   text-indent: -999em
 
@@ -89,7 +94,7 @@ small a
 #main
   width: 700px
   margin: 0 0 0 200px
-  padding: 20px 0 60px 0
+  padding-bottom: 3em
   a
     +hover-link
     +link-colors($spotcolor, $dark)
@@ -134,7 +139,7 @@ small a
         margin-bottom: 0
         padding: 0 0 0 21px
         font-size: .85em
-        color: $medium
+        color: #8C897A
       .task
         background: url(/images/projects/task.png) 0 4px no-repeat
       .period
