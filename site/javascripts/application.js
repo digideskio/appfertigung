@@ -6,10 +6,10 @@ $(document).ready(function(){
       $targetElem = $(this.hash);
       if($targetElem.length){
         event.preventDefault();
-        $targetTop = $targetElem.offset().top
+        $targetTop = $targetElem.offset().top + 8;
         $('html, body').animate({scrollTop: $targetTop}, 1200, 'easeInOutCubic')
         if (window.history && window.history.pushState){
-            var new_url = location.href.replace(/\#.+/, this.hash),
+            var new_url = /\#/.test(location.href) ? location.href.replace(/\#.+/, this.hash) : location.href+this.hash,
                 stateObj = { count : history_counter };
             window.history.pushState(stateObj, 'page-'+history_counter, new_url) 
         }
