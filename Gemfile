@@ -1,6 +1,7 @@
 source :rubygems
 
 gem "staticmatic"
-gem "compass"
+gem 'compass', '~> 0.10.6'
+gem "compass-colors"
 gem "rdiscount"
 

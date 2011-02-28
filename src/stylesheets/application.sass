@@ -24,11 +24,13 @@
 // colors
 // http://kuler.adobe.com/#themeID/1183442
 
-$light: #F2F2ED
-$medium: #9dbdc6
+$light: #F2EDDE
+$medium: #9DBDC6
 $dark: #06262B
-$spotcolor: #485956
+$spotcolor: #9DBDC6
 $brace_color: #000
+$main-width: 700px
+$nav-padding: 4em
 
 =headline
   font-family: TitilliumText22L
@@ -48,6 +50,7 @@ body
   height: 100%
   border-top: .5em solid $brace_color
   border-bottom: 1em solid $brace_color
+  padding-top: $nav-padding
   background-color: $light
   font-family: GentiumBasicRegular
 
@@ -55,7 +58,7 @@ header
   margin-bottom: .5em
 
 section
-  margin-top: 1.5em
+  padding-top: $nav-padding
 
 h1, h2
   +headline
@@ -78,30 +81,59 @@ small a
     content: " »"
 
 #header
-  padding-top: 4.5em
+  padding-top: 2em
 
 #logo
   display: block
   width: 359px
   height: 111px
-  margin: 0 0 0 94px
+  margin: 0 auto
   background: url(/images/appfertigung_software_handgemacht.png) no-repeat
   text-indent: -999em
 
-#claim
-  display: block
-  width: 0
-  height: 0
-  text-indent: -999em
+#nav
+  +box-shadow(#666, 0, 1px)
+  position: fixed
+  z-index: 5
+  top: 0
+  left: 0
+  width: 100%
+  text-align: center
+  color: #FFF
+  background: #000
+  ul
+    +clearfix
+    +horizontal-list
+    list-style: none
+    display: inline-block
+    margin: 0 auto
+    padding: .75em 0 .25em 0
+    li
+      margin: 0 .5em
+      a
+        margin: 0
+        border: 0
+        font-weight: bold
+        color: #FFF
+        line-height: 150%
+        text-decoration: none
+        &:focus,
+        &:hover,
+        &:active
+          color: #CCC
 
 #main
-  width: 700px
-  margin: 0 0 0 200px
+  width: $main-width
+  margin: 0 auto
   padding-bottom: 3em
   a
     +hover-link
     +link-colors($spotcolor, $dark)
-    
+
+#intro
+  text-align: center
+  font-size: 1.2em
+
 #team
   ul
     list-style: none
@@ -110,10 +142,10 @@ small a
       +clearfix
       margin: 10px 0
       img
+        +box-shadow($dark, 0, 0, 4px)
         float: left
         margin: 0 1em 1em 0
         border: 8px solid white
-        +box-shadow($dark, 0, 0, 4px)
       ul.profiles
         margin: .5em 0 0 0
         +clearfix
@@ -121,7 +153,7 @@ small a
           float: left
           margin: 0 1.25em 0 0
 
-#projects
+#projekte
   ul
     list-style: none
     margin-left: 0
@@ -182,7 +214,7 @@ small a
     +min-width(215px)
     float: left
     margin: 0 0 0 40px
-  #contact
+  #kontakt
     margin-left: 0
   h3
     margin: 0 0 7px 0
