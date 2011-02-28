@@ -4,7 +4,7 @@ $(document).ready(function(){
       if($targetElem.length){
         event.preventDefault();
         $targetTop = $targetElem.offset().top
-        $('html, body').animate({scrollTop: $targetTop}, 1600, 'easeOutBack')
+        $('html, body').animate({scrollTop: $targetTop}, 1200, 'easeInOutCubic')
       }    
   })
 })    
