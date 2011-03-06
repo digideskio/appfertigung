@@ -24,17 +24,18 @@
 // colors
 // http://kuler.adobe.com/#themeID/1183442
 
-$light: #F2EDDE
-$medium: #9DBDC6
-$dark: #06262B
-$spotcolor: #9DBDC6
-$brace_color: #000
 $main-width: 700px
+$bg-color: #F2EDDE
+$medium-color: #9DBDC6
+$dark-color: #06262B
+$spot-color: #9DBDC6
+$brace-color: #000
 $nav-padding: 4em
+$heading-color: #3B4458
 
 =headline
   font-family: TitilliumText22L
-  color: $spotcolor
+  color: $heading-color
   font-weight: normal
 
 *
@@ -48,10 +49,10 @@ $nav-padding: 4em
 body
   +font-metrics(16px, 24px)
   height: 100%
-  border-top: .5em solid $brace_color
-  border-bottom: 1em solid $brace_color
+  border-top: .5em solid $brace-color
+  border-bottom: 1em solid $brace-color
   padding-top: $nav-padding
-  background-color: $light
+  background-color: $bg-color
   font-family: GentiumBasicRegular
 
 header
@@ -128,7 +129,7 @@ small a
   padding-bottom: 3em
   a
     +hover-link
-    +link-colors($spotcolor, $dark)
+    +link-colors($heading-color, $dark-color)
 
 #intro
   text-align: center
@@ -142,7 +143,7 @@ small a
       +clearfix
       margin: 10px 0
       img
-        +box-shadow($dark, 0, 0, 4px)
+        +box-shadow($dark-color, 0, 0, 4px)
         float: left
         margin: 0 1em 1em 0
         border: 8px solid white
@@ -203,13 +204,13 @@ small a
 
 #footer
   +clearfix
-  background: $dark
+  background: $dark-color
   overflow: auto
-  color: $light
+  color: $bg-color
   padding: 20px 50px 30px 200px
   a
     +hover-link
-    +link-colors($medium, $spotcolor)
+    +link-colors($medium-color, $spot-color)
   .col
     +min-width(215px)
     float: left
@@ -219,7 +220,7 @@ small a
   h3
     margin: 0 0 7px 0
     padding: 0 30px 0 3px
-    border-bottom: 1px dotted $medium
+    border-bottom: 1px dotted $medium-color
     font-weight: normal
     color: white
 
