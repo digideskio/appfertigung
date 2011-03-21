@@ -4,12 +4,12 @@
 @import 'lib'
 // Oder:
 
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L001-webfont")
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L002-webfont")
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L003-webfont")
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L004-webfont")
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L005-webfont")
-@include fontsrc("TitilliumText22L","/fonts/TitilliumText/TitilliumText22L006-webfont")
+@include fontsrc("TitilliumText22LThin","/fonts/TitilliumText/TitilliumText22L001-webfont")
+@include fontsrc("TitilliumText22LLight","/fonts/TitilliumText/TitilliumText22L002-webfont")
+@include fontsrc("TitilliumText22LRegular","/fonts/TitilliumText/TitilliumText22L003-webfont")
+@include fontsrc("TitilliumText22LMedium","/fonts/TitilliumText/TitilliumText22L004-webfont")
+@include fontsrc("TitilliumText22LBold","/fonts/TitilliumText/TitilliumText22L005-webfont")
+@include fontsrc("TitilliumText22LXBold","/fonts/TitilliumText/TitilliumText22L006-webfont")
 
 @include fontsrc("GentiumBasicRegular",    "/fonts/GentiumBasic/GenBasR-webfont")
 @include fontsrc("GentiumBasicItalic",     "/fonts/GentiumBasic/GenBasI-webfont")
@@ -30,11 +30,12 @@ $medium-color: #9DBDC6
 $dark-color: #06262B
 $spot-color: #9DBDC6
 $brace-color: #000
-$nav-padding: 4em
+$nav-padding: 2em
 $heading-color: #3B4458
+$intro-link-color: #86a1a9
 
 =headline
-  font-family: TitilliumText22L
+  font-family: TitilliumText22LLight
   color: $heading-color
   font-weight: normal
 
@@ -52,14 +53,26 @@ body
   border-top: .5em solid $brace-color
   border-bottom: 1em solid $brace-color
   padding-top: $nav-padding
-  background-color: $bg-color
+  background: $bg-color url(../images/cloth_bg.png) 50% 0 repeat-y
   font-family: GentiumBasicRegular
 
 header
   margin-bottom: .5em
 
 section
-  padding-top: $nav-padding
+  padding: $nav-padding 0
+  width: $main-width
+  margin: 0 auto
+  
+hr
+  border: 0
+  height: 3px
+  &.red
+    background: url(../images/stitch_red.png) 0 0 repeat-x
+  &.blue
+    background: url(../images/stitch_blue.png) 0 0 repeat-x
+  &.gray
+    background: url(../images/stitch_gray.png) 0 0 repeat-x
 
 h1, h2
   +headline
@@ -69,7 +82,22 @@ h1
   text-align: center
   
 h2
-  font-size: 1.5em
+  font-size: 30px
+  margin-bottom: 20px
+  +text-shadow(#fff, 0, 1px, 1px)
+  text-align: center
+  &:before
+    font-size: 20px
+    padding-right: 15px
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
+  &:after
+    font-size: 20px
+    padding-left: 15px
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
   
 h3
   font-weight: normal
@@ -87,10 +115,10 @@ small a
 
 #logo
   display: block
-  width: 359px
-  height: 111px
+  width: 501px
+  height: 148px
   margin: 0 auto
-  background: url(/images/appfertigung_software_handgemacht.png) no-repeat
+  background: url(../images/appfertigung_software_handgemacht.png) no-repeat
   text-indent: -999em
 
 #nav
@@ -125,8 +153,6 @@ small a
           color: #CCC
 
 #main
-  width: $main-width
-  margin: 0 auto
   padding-bottom: 3em
   a
     +hover-link
@@ -134,7 +160,14 @@ small a
 
 #intro
   text-align: center
-  font-size: 1.2em
+  font-size: 24px
+  color: $heading-color
+  a
+    color: $intro-link-color
+    border-bottom: 2px dashed $intro-link-color
+    &:hover
+      text-decoration: none
+      border-bottom: 2px dashed $dark-color
 
 #team
   ul
@@ -144,12 +177,16 @@ small a
       +clearfix
       position: relative
       width: $main-width
-      margin: 10px 0
+      margin: 20px -10px
+      padding: 0 10px
+      strong
+        font-family: GentiumBasicBold
+        font-weight: bold
       img
-        +box-shadow($dark-color, 0, 0, 4px)
+        +box-shadow($dark-color, 0, 1px, 3px)
         float: left
-        margin: 0 1em 1em 0
-        border: 8px solid white
+        margin: 4px 2em 1em 0
+        border: 4px solid white
       ul.profiles
         margin: .5em 0 0 0
         +clearfix
@@ -211,9 +248,19 @@ small a
   overflow: auto
   color: $bg-color
   padding: 20px 50px 30px 200px
+  .external li
+    list-style: none
   a
     +hover-link
     +link-colors($medium-color, $spot-color)
+    &.twitter
+      background: url(../images/twitter_logo.png) 0 50% no-repeat
+      padding: 5px 0 5px 40px
+      display: block
+    &.facebook
+      background: url(../images/facebook_logo.png) 4px 50% no-repeat
+      padding: 5px 0 5px 40px
+      display: block
   .col
     +min-width(215px)
     float: left
