@@ -1,13 +1,11 @@
 %section#intro
   %p
-    Die Appfertigung ist ein Netzwerk von
-    %a{:href => '#team'} Softwareentwicklern und Designern
+    Die Appfertigung ist ein Netzwerk von #{link_to "Softwareentwicklern und Designern", "#team"}.
+    %br
     Wir realisieren Anwendungen für das Web von heute und morgen.
-    Unser Schwerpunkt liegt dabei auf agiler Softwareentwicklung mit Ruby on Rails, JavaScript und HTML5.
-    Uns alle verbindet der Anspruch an unsere Arbeit:
-    %a{:href => '#projekte'} Zuverlässige Software
-    in kreativer Teamarbeit zu konzipieren, gestalten und entwickeln.
-
+    %br
+    Unser Schwerpunkt liegt dabei auf #{link_to "agiler Softwareentwicklung", "#wie-wir-arbeiten"} mit Ruby on Rails, JavaScript und HTML5.
+    Uns alle verbindet der Anspruch an unsere Arbeit: #{link_to "Zuverlässige Software", "#projekte"} in kreativer Teamarbeit zu konzipieren, gestalten und entwickeln.
 %hr.red
 
 %section#wie-wir-arbeiten
@@ -46,6 +44,17 @@
         %li
           %a{:href => "https://www.xing.com/profile/Arbo_vonMonkiewitsch"} XING
     %li.member
+      %img{ :src => '/images/bastian_fritsch.jpg', :alt => "Bastian Fritsch" }
+      <strong>Bastian Fritsch</strong> ist seit sieben Jahren als freier Webentwickler tätig.
+      Neben der Programmierung von Standardkonformen Webseiten, am liebsten
+      mit dem Content Management System „Silverstripe“, lehrt er auch zu
+      Strategien im Web und versucht dabei komplexe Themen einfach darzustellen.
+      %ul.profiles
+        %li
+          %a{:href => "http://bastianfritsch.de"} Website
+        %li
+          %a{:href => "http://www.facebook.com/bastian.fritsch"} Facebook
+    %li.member
       %img{ :src => '/images/dennis_bloete.jpg', :alt => "Dennis Blöte" }
       <strong>Dennis Blöte</strong> ist Software-Entwickler und realisiert seit sieben Jahren
       Projekte im Bereich Webentwicklung sowie Anwendungen für mobile
@@ -64,17 +73,6 @@
           %a{:href => "https://www.xing.com/profile/Dennis_Bloete"} XING
         %li
           %a{:href => "http://dennisbloete.de"} Website
-    %li.member
-      %img{ :src => '/images/bastian_fritsch.jpg', :alt => "Bastian Fritsch" }
-      <strong>Bastian Fritsch</strong> ist seit sieben Jahren als freier Webentwickler tätig.
-      Neben der Programmierung von Standardkonformen Webseiten, am liebsten
-      mit dem Content Management System „Silverstripe“, lehrt er auch zu
-      Strategien im Web und versucht dabei komplexe Themen einfach darzustellen.
-      %ul.profiles
-        %li
-          %a{:href => "http://bastianfritsch.de"} Website
-        %li
-          %a{:href => "http://www.facebook.com/bastian.fritsch"} Facebook
     %li.member
       %img{ :src => '/images/eckhard_rotte.jpg', :alt => "Eckhard Rotte" }
       <strong>Eckhard Rotte</strong> ist Software-Entwickler mit den Schwerpunkten Ruby on Rails und Frontend-Entwicklung.
@@ -119,18 +117,37 @@
   %header
     %h2 Projekte und Referenzen
   %ul
-  
+    %li.web
+      .info
+        %header
+          %h3= link_to "Waterfront Bremen", "http://waterfront-bremen.de"
+        .content
+          %p
+            Betreuung der Webseite des Shopping- und Freizeitcenters Waterfront Bremen. Zu den Aufgaben gehört 
+            die Weiterentwicklung und Optimierung der Site, Konzeption und Entwicklung einer iPhone-Website und die 
+            Erstellung eines monatlichen Newsletters. 
+            Ein weiterer Aufgabenbereich sind die Beratung rund um das Thema Social Media sowie die Erstellung 
+            einer Facebook-Seite. 
+          %p.task
+            Konzeptionelle Beratung, Web-Entwicklung mit MySQL und PHP, Konzeption und Entwicklung einer iPhone-Website
+          %p.context
+            Auftragsarbeit für die #{link_to "Waterfront Bremen GmbH", "http://waterfront-bremen.de"}
+          %p.period
+            seit November 2009 
+      .meta.veiled
+        %img{ :src => '/images/portfolio/waterfront-bremen.jpg', :alt => "Waterfront Bremen" }
+        .veil
     %li.web
       .info
         %header
           %h3= link_to "Shopshopper", "http://shopshopper.net"
         .content
           %p
-            Das umfangreiche Portal für die Convenience-Branche richtet sich an Kiosk- und Tankstellenbetreiber und
+            Das umfangreiche Online-Portal richtet sich an Kunden aus dem Convenience-Bereich und
             stellt branchenspezifische Tools und Hilfestellungen zur Verfügung. 
-            Es wurde zunächst von Marco Pantaleo und Stefan Schüßler entwickelt, gestaltet und konzipiert.
+            Es wurde zunächst von Marco Pantaleo und Stefan Schüßler konzipiert, gestaltet und entwickelt.
             Später stießen dann Dennis Blöte und Eckhard Rotte zum Team hinzu. 
-            Die gute Zusammenarbeit in diesem Projekt wurde später zu einem der Grundsteine für die Appfertigung.  
+            Die gute Zusammenarbeit in diesem Projekt wurde zu einem der Grundsteine für die Appfertigung.  
 
           %p.task
             Beratung und Backend-Entwicklung mit Ruby on Rails. Frontend-Entwicklung mit HAML und jQuery
@@ -141,16 +158,15 @@
       .meta.veiled
         %img{ :src => '/images/portfolio/shopshopper.jpg', :alt => "Shopshopper" }
         .veil
-  
     %li.web
       .info
         %header
           %h3= link_to "DIE ZEIT Webshop", "http://shop.zeit.de/"
         .content
           %p
-            Die Entwicklung und Betreuung des #{link_to "Webshop für DIE ZEIT", "http://shop.zeit.de/"}
+            Die Entwicklung und Betreuung des Webshop für DIE ZEIT
             war das erste gemeinsame Projekt von Dennis Blöte und Eckhard Rotte. 
-            Sowohl der Shop als auch das Administrationsbackend wurden mit Ruby on Rails entwickelt.
+            Sowohl der Shop, als auch das Administrationsbackend wurden mit Ruby on Rails entwickelt.
             Interessante Aufgabenstellungen waren dabei unter anderem die Anbindung von Drittanbietern
             über Webservice-Schnittstellen und die Integration des Payment-Gateways.
           %p.task
@@ -163,49 +179,3 @@
       .meta.veiled
         %img{ :src => '/images/portfolio/zeitshop.jpg', :alt => "DIE ZEIT Webshop" }
         .veil
-    %li.iphone.invert
-      .info
-        %header
-          %h3= link_to "ZENDOME", "http://itunes.apple.com/de/app/zendome/id353137169?mt=8"
-        .content
-          %p
-            Mobil, sicher und zukunftsweisend - so macht Eventmanagement Spaß: Als einziger Hersteller mobiler Event-Architektur
-            bietet die #{link_to "ZENDOME GmbH", "http://zendome.de/"} eine Planungshilfe als iPhone-Applikation an.
-          %p
-            Die Anwendung ermöglicht es, die verschiedenen geodätischen Dome zur ZENDOME.domescapes zu kombinieren und damit Ihre
-            Veranstaltung vordenken. Ist eine Planung erstellt lässt sich schnell und unkompliziert ein Angebot anfordern.
-          %p
-            Die Anwendung ist kostenlos #{link_to "im iTunes App Store erhältlich", "http://itunes.com/apps/zendome"}.
-          %p.task
-            Native Software-Entwicklung mit Objective-C, Xcode und Interface Builder
-          %p.context
-            Auftragsarbeit für die #{link_to "ZENDOME GmbH", "http://zendome.de/"}
-          %p.period
-            Januar 2010
-      .meta.veiled
-        %img{ :src => '/images/portfolio/zendome_iphone.jpg', :alt => "ZENDOME iPhone App" }
-        .veil
-      %li.web
-        .info
-          %header
-            %h3= link_to "Waterfront Bremen", "http://waterfront-bremen.de"
-          .content
-            %p
-              Betreuung der Webseite des Shopping- und Freizeitcenters Waterfront Bremen. Zu den Aufgaben gehört 
-              die Weiterentwicklung und Optimierung der Site, Konzeption und Entwicklung einer Iphone Webseite und die 
-              Erstellung eines monatlichen Newsletters. 
-              Ein weiterer Aufgabenbereich sind die Beratung rund um das Thema Social Media sowie die Erstellung 
-              einer Facebook-Seite. 
-            %p.task
-              Konzeptionelle Beratung, Web-Entwicklung mit MySQL und PHP
-            %p.task
-              Konzeption und Entwicklung einer iPhone-Website
-            %p.context
-              Auftragsarbeit für die #{link_to "Waterfront Bremen GmbH", "http://waterfront-bremen.de"}
-            %p.period
-              seit November 2009 
-        .meta.veiled
-          %img{ :src => '/images/portfolio/waterfront-bremen.jpg', :alt => "Waterfront Bremen" }
-          .veil
-
-%hr.red

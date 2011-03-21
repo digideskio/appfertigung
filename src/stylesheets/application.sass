@@ -2,30 +2,13 @@
 @import "compass/reset/utilities"
 @import "compass/utilities"
 @import 'lib'
-// Oder:
 
-@include fontsrc("TitilliumText22LThin","/fonts/TitilliumText/TitilliumText22L001-webfont")
 @include fontsrc("TitilliumText22LLight","/fonts/TitilliumText/TitilliumText22L002-webfont")
-@include fontsrc("TitilliumText22LRegular","/fonts/TitilliumText/TitilliumText22L003-webfont")
-@include fontsrc("TitilliumText22LMedium","/fonts/TitilliumText/TitilliumText22L004-webfont")
-@include fontsrc("TitilliumText22LBold","/fonts/TitilliumText/TitilliumText22L005-webfont")
-@include fontsrc("TitilliumText22LXBold","/fonts/TitilliumText/TitilliumText22L006-webfont")
-
 @include fontsrc("GentiumBasicRegular",    "/fonts/GentiumBasic/GenBasR-webfont")
-@include fontsrc("GentiumBasicItalic",     "/fonts/GentiumBasic/GenBasI-webfont")
 @include fontsrc("GentiumBasicBold",       "/fonts/GentiumBasic/GenBasB-webfont")
-@include fontsrc("GentiumBasicBoldItalic", "/fonts/GentiumBasic/GenBasBI-webfont")
-
-@include fontsrc("KontrapunktBold",        "/fonts/Kontrapunkt/Kontrapunkt-Bold-webfont")
-@include fontsrc("KontrapunktLight",       "/fonts/Kontrapunkt/Kontrapunkt-Light-webfont")
-@include fontsrc("KontrapunktLightItalic", "/fonts/Kontrapunkt/Kontrapunkt-LightItalic-webfont")
-
-
-// colors
-// http://kuler.adobe.com/#themeID/1183442
 
 $main-width: 700px
-$bg-color: #F2EDDE
+$bg-color: #f8f4ea
 $medium-color: #9DBDC6
 $dark-color: #06262B
 $spot-color: #9DBDC6
@@ -51,8 +34,7 @@ body
   +font-metrics(16px, 24px)
   height: 100%
   border-top: .5em solid $brace-color
-  border-bottom: 1em solid $brace-color
-  padding-top: $nav-padding
+  padding-top: $nav-padding * 2
   background: $bg-color url(../images/cloth_bg.png) 50% 0 repeat-y
   font-family: GentiumBasicRegular
 
@@ -159,6 +141,7 @@ small a
     +link-colors($heading-color, $dark-color)
 
 #intro
+  width: 800px
   text-align: center
   font-size: 24px
   color: $heading-color
@@ -244,7 +227,7 @@ small a
 
 #footer
   +clearfix
-  background: $dark-color
+  background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
   overflow: auto
   color: $bg-color
   padding: 20px 50px 30px 200px
@@ -268,12 +251,15 @@ small a
   #kontakt
     margin-left: 0
   h3
+    font-family: TitilliumText22LLight
     margin: 0 0 7px 0
-    padding: 0 30px 0 3px
-    border-bottom: 1px dotted $medium-color
     font-weight: normal
     color: white
 
+#seam
+  +clearfix
+  height: 7px
+  background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
 
 .veiled
   display: inline-block
