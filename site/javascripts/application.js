@@ -16,26 +16,4 @@ $(document).ready(function(){
       }    
   });
   
-  // team animation
-  var animateMember = function(element, direction, valY) {
-    var offY = element.offset().top;
-    element.css(direction, '-' + (offY - valY) + 'px');
-  };
-  var animateTeam = function() { 
-    var scrollY = $('body').scrollTop();
-    var teamY   = $('#team').offset().top;
-    var startY  = teamY - $(window).height();
-    var finalY  = $(window).height() / 1.5;
-    var valY    = scrollY - startY + finalY;
-    $('#team ul li.member:even').each(function() {
-      animateMember($(this), 'left', valY);
-    });
-    $('#team ul li.member:odd').each(function() {
-      animateMember($(this), 'right', valY);
-    });
-  };
-  
-  $(window).scroll(animateTeam);
-  $(window).resize(animateTeam);
-  animateTeam();
 })    
