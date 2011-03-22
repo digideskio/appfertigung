@@ -23,6 +23,10 @@ $intro-link-color: #86a1a9
   color: $heading-color
   font-weight: normal
 
+=italic
+  font-family: GentiumBasicItalic
+  font-style: normal
+
 =dropshadow
   +box-shadow($dark-color, 0, 1px, 3px)
 
@@ -60,29 +64,32 @@ h1
 h2  
   +text-shadow(#fff, 0, 1px, 1px)
   font-size: 30px
-  margin: 0 0 20px 0
+  margin-bottom: 20px
   text-align: center
   &:before
     font-size: 20px
     padding-right: 15px
-    vertical-align: text-bottom $spot-color"★"
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
   &:after
     font-size: 20px
     padding-left: 15px
     vertical-align: text-bottom
     color: $spot-color
-
+    content: "★"
+  
 h3
   font-weight: normal
 
+p
+  margin: 0 0 .75em 0
+  
 ul
   margin-left: 1.25em
 
 em
-  display: block
-  margin-top: .5em
-  font-family: GentiumBasicItalic
-  font-style: italic
+  +italic
 
 hr
   border: 0
@@ -100,6 +107,12 @@ small a
   text-decoration: none
   &:after
     content: " »"
+
+.conclusion
+  +italic
+  margin-top: 1.25em
+  text-align: center
+  font-size: 18px
 
 #header
   padding-top: 2em
@@ -122,6 +135,7 @@ small a
   text-align: center
   color: #FFF
   background: #000
+  font-family: GentiumBasicBold
   ul
     +clearfix
     +horizontal-list
@@ -136,7 +150,7 @@ small a
       a
         margin: 0
         border: 0
-        font-weight: bold
+        font-weight: normal
         color: #FFF
         line-height: 150%
         text-decoration: none
@@ -171,7 +185,7 @@ small a
 
 #cycle
   float: right
-  margin: -10px -50px 20px 40px
+  margin: 30px -30px 30px 30px
 
 #team
   ul
@@ -185,7 +199,7 @@ small a
       padding: 0 10px
       strong
         font-family: GentiumBasicBold
-        font-weight: bold
+        font-weight: normal
       img
         +dropshadow
         float: left
