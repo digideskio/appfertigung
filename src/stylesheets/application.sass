@@ -90,12 +90,14 @@ em
 hr
   border: 0
   height: 3px
+  background-repeat: repeat-x
+  clear: both
   &.red
-    background: url(../images/stitch_red.png) 0 0 repeat-x
+    background-image: url(../images/stitch_red.png)
   &.blue
-    background: url(../images/stitch_blue.png) 0 0 repeat-x
+    background-image: url(../images/stitch_blue.png)
   &.gray
-    background: url(../images/stitch_gray.png) 0 0 repeat-x
+    background-image: url(../images/stitch_gray.png)
 
 small a
   text-decoration: none
@@ -169,6 +171,10 @@ small a
     &:hover
       text-decoration: none
       border-bottom: 2px dashed $dark-color
+
+#cycle
+  float: right
+  margin: -40px -50px 20px 40px
 
 #team
   ul
