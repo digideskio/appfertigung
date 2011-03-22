@@ -23,6 +23,10 @@ $intro-link-color: #86a1a9
   color: $heading-color
   font-weight: normal
 
+=italic
+  font-family: GentiumBasicItalic
+  font-style: italic
+
 =dropshadow
   +box-shadow($dark-color, 0, 1px, 3px)
 
@@ -78,14 +82,14 @@ h2
 h3
   font-weight: normal
 
+p
+  margin: 0 0 .75em 0
+  
 ul
   margin-left: 1.25em
 
 em
-  display: block
-  margin-top: .5em
-  font-family: GentiumBasicItalic
-  font-style: italic
+  +italic
 
 hr
   border: 0
@@ -103,6 +107,12 @@ small a
   text-decoration: none
   &:after
     content: " »"
+
+.conclusion
+  +italic
+  margin-top: 1.25em
+  text-align: center
+  font-size: 18px
 
 #header
   padding-top: 2em
@@ -174,7 +184,7 @@ small a
 
 #cycle
   float: right
-  margin: -10px -50px 20px 40px
+  margin: 30px -30px 30px 30px
 
 #team
   ul
