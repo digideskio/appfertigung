@@ -4,9 +4,8 @@ $(document).ready(function(){
   var scrollPage = function(hash) {
     $target = $(hash);
     if ($target.length) {
-      console.debug(hash);
       event.preventDefault();
-      $('html, body').animate({scrollTop: ($target.offset().top - 30)}, 1200, 'easeInOutCubic');
+      $('html, body').animate({scrollTop: ($target.offset().top - $('#nav').height())}, 1200, 'easeInOutCubic');
       if (window.history && window.history.pushState) {
         var new_url = /\#/.test(location.href) ? location.href.replace(/\#.+/, hash) : (location.href + hash),
             stateObj = { count : history_counter };
