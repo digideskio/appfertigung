@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var history_counter = 0;    
   
-  var scrollPage = function(hash) {
+  var scrollPage = function(hash, event) {
     $target = $(hash);
     if ($target.length) {
       event.preventDefault();
@@ -16,7 +16,7 @@ $(document).ready(function(){
   };
   
   $('a[href^="#"]').click(function(event) {
-    scrollPage(this.hash);
+    scrollPage(this.hash, event);
   });
   
   // window.onhashchange = function() {
@@ -28,7 +28,7 @@ $(document).ready(function(){
     var opacity = (scrollY - $('#intro').offset().top) * 0.005;
     if (opacity < 0) opacity = 0;
     else if (opacity > 1) opacity = 1;
-    $('#nav li:first-child').css('opacity', opacity);
+    $('li#home').css('opacity', opacity);
   };
   
   $(window).load(animateAvatar).scroll(animateAvatar);
