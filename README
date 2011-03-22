@@ -1,17 +1,16 @@
 Hey,
 
-das hier ist ein Startpunkt für eine kleine, statische Website mit 
-Staticmatic.
+das hier ist ein Startpunkt für eine kleine, statische Website mit Staticmatic.
 
-Einfach ,rvmrc akzeptieren oder anpassen, 
+Einfach rvmrc akzeptieren oder anpassen,
 bundler laufen lassen, 
-$ staticmatic preview .
+$ rake preview
 
 und los gehts!
 
 
 HAML, SASS, Compass und jQuery sind integriert.
-Ausserdem wird ein awesome-fontstack verwendet.
+Außerdem wird ein awesome-fontstack verwendet.
 
 Ein paar Anregungen und Ideen kann man z.B. noch hier klauen
 https://github.com/adamstac/staticmatic-bootstrap
