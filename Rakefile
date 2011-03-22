@@ -4,8 +4,8 @@ require "rubygems"
 require "bundler"
 Bundler.setup
 
-ssh_user = "user@domain.com" # for rsync deployment
-remote_root = "~/path/to/remote/" # for rsync deployment
+ssh_user      = "deploy@appfertigung.com"    # for rsync deployment
+document_root = "/var/www/appfertigung" # for rsync deployment
 
 desc "Runs preview"
 task :preview do
@@ -21,7 +21,7 @@ end
 desc "Clears and generates new styles, builds and deploys"
 task :deploy => :build do
   puts "*** Deploying the site ***"
-  system("rsync -avz --delete site/ #{ssh_user}:#{remote_root}")
+  system("rsync -avz --delete site/ #{ssh_user}:#{document_root}")
 end
 
 namespace :styles do
