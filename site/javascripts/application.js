@@ -28,7 +28,7 @@ $(document).ready(function(){
     var opacity = (scrollY - $('#intro').offset().top) * 0.005;
     if (opacity < 0) opacity = 0;
     else if (opacity > 1) opacity = 1;
-    $('nav li:first-child').css('opacity', opacity);
+    $('#nav li:first-child').css('opacity', opacity);
   };
   
   $(window).load(animateAvatar).scroll(animateAvatar);
