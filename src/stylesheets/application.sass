@@ -50,9 +50,11 @@ header
   margin-bottom: .5em
 
 section
-  padding: $nav-padding 0
+  padding: $nav-padding*2 0
   width: $main-width
   margin: 0 auto
+  p:last-child
+    margin-bottom: 0
 
 h1, h2
   +headline
@@ -241,6 +243,8 @@ small a
         background: url(/images/projects/period.png) 0 3px no-repeat
       .context
         background: url(/images/projects/context.png) 0 4px no-repeat
+      &:last-child
+        padding-bottom: 0
 
 #footer
   +clearfix

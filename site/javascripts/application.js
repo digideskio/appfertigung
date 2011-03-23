@@ -5,7 +5,7 @@ $(document).ready(function(){
     $target = $(hash);
     if ($target.length) {
       event.preventDefault();
-      var top = ($target.offset().top - $('#nav').height() + 10);
+      var top = ($target.offset().top + 10);
       $('html, body').animate({scrollTop:top}, 1200, 'easeInOutCubic');
       if (window.history && window.history.pushState) {
         var new_url = /\#/.test(location.href) ? location.href.replace(/\#.+/, hash) : (location.href + hash),
@@ -15,7 +15,7 @@ $(document).ready(function(){
     }
   };
   
-  $('a[href^="#"]').click(function(event) {
+  $('a[href^="/#"]').click(function(event) {
     scrollPage(this.hash, event);
   });
   
