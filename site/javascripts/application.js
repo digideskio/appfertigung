@@ -15,7 +15,7 @@ $(document).ready(function(){
     }
   };
   
-  $('a[href^="/#"]').click(function(event) {
+  $('a[href*="#"]').click(function(event) {
     scrollPage(this.hash, event);
   });
   
