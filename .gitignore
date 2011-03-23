@@ -1,6 +1,5 @@
 .bundle
 site/*.html
-site/en/*
 site/stylesheets/*
 .DS_Store
 .idea
