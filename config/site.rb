@@ -6,10 +6,11 @@ Compass.configuration do |config|
   # Please update this if it is or remove this message if it can stay the way it is.
   config.project_path = File.dirname(__FILE__)
   config.sass_dir = File.join('src', 'stylesheets')
+  config.output_style = :compressed
 end
 
 # sass_engine_options returns a hash, you can merge it with other options.
-configuration.sass_options = Compass.sass_engine_options
+config.sass_options = Compass.sass_engine_options
 
 configuration.haml_options = {
   :format => :html5,

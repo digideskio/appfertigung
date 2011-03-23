@@ -2,22 +2,12 @@
 @import "compass/reset/utilities"
 @import "compass/utilities"
 @import 'lib'
+@import 'base'
 
 @include fontsrc("TitilliumText22LLight","/fonts/TitilliumText/TitilliumText22L002-webfont")
 @include fontsrc("GentiumBasicRegular",    "/fonts/GentiumBasic/GenBasR-webfont")
 @include fontsrc("GentiumBasicItalic",    "/fonts/GentiumBasic/GenBasI-webfont")
 @include fontsrc("GentiumBasicBold",       "/fonts/GentiumBasic/GenBasB-webfont")
-
-$main-width: 700px
-$wide-width: 800px
-$bg-color: #f8f4ea
-$medium-color: #9DBDC6
-$dark-color: #06262B
-$spot-color: #9DBDC6
-$brace-color: #000
-$nav-padding: 2em
-$heading-color: #3B4458
-$intro-link-color: #86a1a9
 
 =headline
   font-family: TitilliumText22LLight
@@ -40,7 +30,7 @@ $intro-link-color: #86a1a9
 +reset-html5
 
 body
-  +font-metrics(16px, 24px)
+  +font-metrics($font-size, $font-size*1.5)
   height: 100%
   border-top: .5em solid $brace-color
   padding-top: $nav-padding * 2
@@ -282,10 +272,9 @@ small a
     width: 295px
     iframe
       border: none
-      background: #FFF
       overflow: hidden
       width: 295px
-      height: 180px
+      height: 170px
 
 #seam
   +clearfix
