@@ -9,6 +9,7 @@
 @include fontsrc("GentiumBasicBold",       "/fonts/GentiumBasic/GenBasB-webfont")
 
 $main-width: 700px
+$wide-width: 800px
 $bg-color: #f8f4ea
 $medium-color: #9DBDC6
 $dark-color: #06262B
@@ -174,7 +175,7 @@ small a
     +link-colors($heading-color, $dark-color)
 
 #intro
-  width: 800px
+  width: $wide-width
   font-size: 21px
   color: $heading-color
   text-align: center
@@ -246,11 +247,13 @@ small a
         padding-bottom: 0
 
 #footer
-  +clearfix
   background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
   overflow: auto
   color: $bg-color
-  padding: 20px 50px 30px 200px
+  #footwrap
+    +clearfix
+    width: $wide-width
+    margin: 1.5em auto
   .external li
     list-style: none
   a
@@ -267,14 +270,22 @@ small a
   .col
     +min-width(215px)
     float: left
-    margin: 0 0 0 40px
-  #kontakt
-    margin-left: 0
+    margin: 0 0 0 36px
   h3
     font-family: TitilliumText22LLight
     margin: 0 0 7px 0
     font-weight: normal
     color: white
+  #kontakt
+    margin-left: 0
+  #facebook
+    width: 295px
+    iframe
+      border: none
+      background: #FFF
+      overflow: hidden
+      width: 295px
+      height: 180px
 
 #seam
   +clearfix

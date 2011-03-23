@@ -1,26 +1,37 @@
 %footer#footer
-  #kontakt.col.vcard
-    %h3
-      Kontakt
-    %p.adr
-      %span.org Die Appfertigung
-      %br
-      %span.street-address Hansator 1
-      \/
-      %a.extended-address.url{:href => "http://abfertigung.de"} Abfertigung
-      %br 
-      %span.postal-code 28217 
-      %span.locality Bremen
-      %br
-      %a.email{:href => 'mailto:mail@appfertigung.com'} mail@appfertigung.com
-    %p
-      %small
-        %a{:href => '/impressum.html'} Impressum
-  #social.col
-    %h3 Die Appfertigung auf…
-    %a.twitter{:href => "https://twitter.com/appfertigung"} Twitter
-    %a.facebook{:href => "https://www.facebook.com/pages/Appfertigung/172304702813059"} Facebook
-  #facebook.col
-    %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FAppfertigung%2F172304702813059&amp;width=292&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=180", :style => "border:none;background:#FFF;overflow:hidden;width:292px;height:180px;"}
-
+  #footwrap
+    #kontakt.col.vcard
+      %h3
+        Kontakt
+      %p.adr
+        %span.org Die Appfertigung
+        %br
+        %span.street-address Hansator 1
+        \/
+        %a.extended-address.url{:href => "http://abfertigung.de"} Abfertigung
+        %br 
+        %span.postal-code 28217 
+        %span.locality Bremen
+        %br
+        %a.email{:href => 'mailto:mail@appfertigung.com'} mail@appfertigung.com
+      %p
+        %small
+          %a{:href => '/impressum.html'} Impressum
+    #social.col
+      %h3 Die Appfertigung auf…
+      %a.twitter{:href => "https://twitter.com/appfertigung"} Twitter
+      %a.facebook{:href => "https://www.facebook.com/pages/Appfertigung/172304702813059"} Facebook
+    #facebook.col
+      #fb-root
+        :javascript
+          window.fbAsyncInit = function() {
+            FB.init({ appId: '172304702813059', xfbml: true });
+          };
+          (function() {
+            var e = document.createElement('script');
+            e.src = document.location.protocol + '//connect.facebook.net/de_DE/all.js';
+            e.async = true;
+            document.getElementById('fb-root').appendChild(e);
+          }());
+      %fb:fan{ :profile_id => 172304702813059, :connections => 5, :stream => 0, :logobar => 0, :width => 295, :height => 180, :css => "http://appfertigung.com/stylesheets/facebook.css" }
 #seam
