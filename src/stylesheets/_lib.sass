@@ -1,10 +1,12 @@
 // @include fontsrc("MEgalopolis Extra","MEgalopolisExtraRegular/megalopolisextra-webfont")
 
-= fontsrc($name, $path)
+= fontsrc($name, $path, $weight=400, $style=normal)
   @font-face
     font-family: $name
     src: url('#{$path}.eot')
     src: local('☺'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg#ab12c33') format('svg')
+    font-weight: $weight
+    font-style: $style
 
 =line-height($line-height, $font-size)
   line-height: $line-height / $font-size
