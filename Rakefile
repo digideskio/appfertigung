@@ -4,7 +4,7 @@ require "rubygems"
 require "bundler"
 Bundler.setup
 
-ssh_user      = "appfertigung@appfertigung.com"    # for rsync deployment
+ssh_user      = "deploy@appfertigung.com"    # for rsync deployment
 document_root = "/var/www/appfertigung" # for rsync deployment
 
 desc "Runs preview"
