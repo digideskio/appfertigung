@@ -2,7 +2,7 @@ Hey,
 
 das hier ist ein Startpunkt für eine kleine, statische Website mit Staticmatic.
 
-Einfach rvmrc akzeptieren oder anpassen,
+ggf. RVM-Environment anlegen,
 bundler laufen lassen, 
 $ rake preview
 
