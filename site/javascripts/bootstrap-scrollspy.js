@@ -91,7 +91,6 @@
       }
 
     , activate: function (target) {
-        console.debug(target)
         var active
           , selector
 
