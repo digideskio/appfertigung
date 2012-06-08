@@ -19,7 +19,7 @@ $(document).ready(function(){
     scrollPage(this.hash, event);
   });
 
-  $('#nav').scrollspy({offset: 150});
+  $('#nav').scrollspy();
 
   var animateAvatar = function() {
     var scrollY = $(document).scrollTop();

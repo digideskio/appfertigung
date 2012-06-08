@@ -30,7 +30,8 @@
     var process = $.proxy(this.process, this)
       , $element = $(element).is('body') ? $(window) : $(element)
       , href
-    this.options = $.extend({}, $.fn.scrollspy.defaults, options)
+    this.options = $.extend({}, $.fn.scrollspy.defaults, options);
+    if ($.browser.mozilla){this.options.offset += 140};
     this.$scrollElement = $element.on('scroll.scroll.data-api', process)
     this.selector = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
@@ -76,8 +77,7 @@
           , targets = this.targets
           , activeTarget = this.activeTarget
           , i
-
-        if (scrollTop >= maxScroll) {
+        if (maxScroll && scrollTop >= maxScroll) {
           return activeTarget != (i = targets.last()[0])
             && this.activate ( i )
         }
@@ -91,6 +91,7 @@
       }
 
     , activate: function (target) {
+        console.debug(target)
         var active
           , selector
 
