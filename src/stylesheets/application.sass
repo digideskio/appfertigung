@@ -7,7 +7,7 @@
 @include fontsrc("TitilliumText22LLight","/fonts/TitilliumText/TitilliumText22L002-webfont")
 @include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasB-webfont", 700)
 @include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasI-webfont", 400, italic)
-@include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasR-webfont")
+@include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasR-webfont", 400)
 
 =headline
   font-family: TitilliumText22LLight
@@ -132,6 +132,8 @@ small a
     li
       margin: 0 .5em
       a
+        +transition-property(all)
+        +transition-duration(0.15s)
         margin: 0
         border: 0
         font-weight: normal
