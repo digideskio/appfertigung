@@ -2,16 +2,16 @@
   %h1
     %a#logo{:href => "/"}
       %img{ :src => '/images/appfertigung_software_handgemacht.png', :alt => "Appfertigung – Software, handgemacht" }
-    
+
 %nav#nav
-  %ul
+  %ul.nav
     %li#home
-      %a{:href => "/#appfertigung"} Appfertigung
+      %a{href: "/#appfertigung", :'data-target' => "/#appfertigung"} Appfertigung
     %li
-      %a{:href => "/#wie-wir-arbeiten"} Wie wir arbeiten
+      %a{href: "/#wie-wir-arbeiten", :'data-target' => "#wie-wir-arbeiten"} Wie wir arbeiten
     %li
-      %a{:href => "/#team"} Das Team
+      %a{href: "/#team", :"data-target" => "#team"} Das Team
     %li
-      %a{:href => "/#projekte"} Projekte &amp; Referenzen
+      %a{href: "/#projekte", :"data-target" => "#projekte"} Projekte &amp; Referenzen
     %li
-      %a{:href => "/#kontakt"} Kontakt
+      %a{href: "/#kontakt", :"data-target" => "#kontakt" } Kontakt
