@@ -240,7 +240,11 @@ small a
         background: url(/images/projects/team.png) 0 4px no-repeat
       &:last-child
         padding-bottom: 0
-
+      &.invert
+        .info
+          +float-left
+        .meta
+          +float-right
 #footer
   background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
   overflow: auto
