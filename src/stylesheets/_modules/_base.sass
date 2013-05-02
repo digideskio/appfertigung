@@ -1,0 +1,79 @@
+*
+  margin: 0
+  padding: 0
+  border: 0 solid
+  outline: 0
+
++reset-html5
+
+body
+  +font-metrics($font-size, $font-size*1.5)
+  height: 100%
+  padding-top: $nav-padding * 2
+  background: $bg-color url(../images/cloth_bg.png) 50% 0 repeat-y
+  font-family: GentiumBasic
+  color: $dark-color
+
+header
+  margin-bottom: .5em
+
+section
+  padding: $nav-padding*2 0
+  width: $main-width
+  margin: 0 auto
+  p:last-child
+    margin-bottom: 0
+
+h1, h2
+  +headline
+
+h1
+  font-size: 1.8em
+  text-align: center
+
+h2
+  +single-text-shadow(#fff, 0, 1px, 1px)
+  font-size: 30px
+  margin-bottom: 20px
+  text-align: center
+  &:before
+    font-size: 20px
+    padding-right: 15px
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
+  &:after
+    font-size: 20px
+    padding-left: 15px
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
+
+h3
+  font-weight: normal
+
+p
+  margin: 0 0 .75em 0
+
+ul
+  margin-left: 1.25em
+
+em
+  font-style: italic
+
+hr
+  border: 0
+  height: 3px
+  background-repeat: repeat-x
+  clear: both
+  &.red
+    background-image: url(../images/stitch_red.png)
+  &.blue
+    background-image: url(../images/stitch_blue.png)
+  &.gray
+    background-image: url(../images/stitch_gray.png)
+
+small a
+  text-decoration: none
+  &:after
+    content: " »"

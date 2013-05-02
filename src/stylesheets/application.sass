@@ -1,164 +1,21 @@
 @import "compass/css3"
 @import "compass/reset/utilities"
 @import "compass/utilities"
+
+@import 'config'
 @import 'lib'
-@import 'base'
 
-@include fontsrc("TitilliumText22LLight","/fonts/TitilliumText/TitilliumText22L002-webfont")
-@include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasB-webfont", 700)
-@include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasI-webfont", 400, italic)
-@include fontsrc("GentiumBasic", "/fonts/GentiumBasic/GenBasR-webfont", 400)
+@import '_modules/_fonts'
+@import '_modules/_base'
+@import '_modules/_layout'
+@import '_modules/_footer'
+@import '_modules/_facebook'
 
-=headline
-  font-family: TitilliumText22LLight
-  color: $heading-color
-  font-weight: normal
-
-=dropshadow
-  +single-box-shadow($dark-color, 0, 1px, 3px)
-
-*
-  margin: 0
-  padding: 0
-  border: 0 solid
-  outline: 0
-
-+reset-html5
-
-body
-  +font-metrics($font-size, $font-size*1.5)
-  height: 100%
-  padding-top: $nav-padding * 2
-  background: $bg-color url(../images/cloth_bg.png) 50% 0 repeat-y
-  font-family: GentiumBasic
-  color: $dark-color
-
-header
-  margin-bottom: .5em
-
-section
-  padding: $nav-padding*2 0
-  width: $main-width
-  margin: 0 auto
-  p:last-child
-    margin-bottom: 0
-
-h1, h2
-  +headline
-
-h1
-  font-size: 1.8em
-  text-align: center
-
-h2
-  +single-text-shadow(#fff, 0, 1px, 1px)
-  font-size: 30px
-  margin-bottom: 20px
-  text-align: center
-  &:before
-    font-size: 20px
-    padding-right: 15px
-    vertical-align: text-bottom
-    color: $spot-color
-    content: "★"
-  &:after
-    font-size: 20px
-    padding-left: 15px
-    vertical-align: text-bottom
-    color: $spot-color
-    content: "★"
-
-h3
-  font-weight: normal
-
-p
-  margin: 0 0 .75em 0
-
-ul
-  margin-left: 1.25em
-
-em
-  font-style: italic
-
-hr
-  border: 0
-  height: 3px
-  background-repeat: repeat-x
-  clear: both
-  &.red
-    background-image: url(../images/stitch_red.png)
-  &.blue
-    background-image: url(../images/stitch_blue.png)
-  &.gray
-    background-image: url(../images/stitch_gray.png)
-
-small a
-  text-decoration: none
-  &:after
-    content: " »"
 
 .conclusion
   margin-top: 1.25em
   text-align: center
 
-#header
-  padding-top: 2em
-
-#logo
-  display: block
-  text-align: center
-
-#nav
-  +dropshadow
-  position: fixed
-  z-index: 5
-  top: 0
-  left: 0
-  width: 100%
-  text-align: center
-  color: #FFF
-  background: $dark-color url(../images/stitch_blue.png) -3px bottom repeat-x
-  font-family: GentiumBasic
-  font-weight: 700
-  ul
-    +clearfix
-    +horizontal-list
-    position: relative
-    left: -1em
-    list-style: none
-    display: inline-block
-    margin: 0 auto
-    padding: .75em 0 .25em 0
-    li
-      margin: 0 .5em
-      a
-        +transition-property(all)
-        +transition-duration(0.15s)
-        margin: 0
-        border: 0
-        font-weight: normal
-        color: #FFF
-        line-height: 150%
-        text-decoration: none
-        &:focus, &:hover, &:active
-          color: #ccc
-      &.current, &.active
-        a
-          border-bottom: 1px solid #ccc
-      &:first-child
-        opacity: 0
-        a
-          display: inline-block
-          text-indent: -999em
-          width: 21px
-          height: 24px
-          background: url(../images/avatar_header.png) no-repeat
-
-#main
-  padding-bottom: 3em
-  a
-    +hover-link
-    +link-colors($heading-color, $dark-color)
 
 #intro
   width: $wide-width
@@ -174,6 +31,13 @@ small a
 
 // Suppress line breaks in iPhone
 @media only screen and (max-device-width: 480px)
+  section, #intro,
+  section#team ul > li.member
+    width: auto
+  #cycle
+    width: 16rem
+    height: 16rem
+    margin: 20px
   #intro
     p:first-child
       br
@@ -182,108 +46,6 @@ small a
 #cycle
   float: right
   margin: 30px -30px 30px 30px
-
-#team
-  ul
-    list-style: none
-    margin: 0
-    li.member
-      +clearfix
-      position: relative
-      width: $main-width
-      margin: 20px -10px
-      padding: 0 10px
-      strong
-        font-family: GentiumBasic
-        font-weight: 700
-      img
-        +dropshadow
-        float: left
-        margin: 4px 2em 1em 0
-        border: 4px solid white
-      div.profile
-        margin-left: 160px
-      ul.profiles
-        +clearfix
-        margin: .5em 0 0 0
-        li
-          float: left
-          margin: 0 1.25em 0 0
-
-#projekte
-  ul
-    list-style: none
-    margin-left: 0
-    li
-      +clearfix
-      padding: 2em 0
-      .info
-        +float-right
-        width: 55%
-      .meta
-        +float-left
-        width: 40%
-        padding-top: 3px
-        text-align: center
-      .task,
-      .period,
-      .context
-        margin-bottom: 0
-        padding: 0 0 0 21px
-        font-size: .85em
-        color: #8C897A
-      .task
-        background: url(/images/projects/task.png) 0 4px no-repeat
-      .period
-        background: url(/images/projects/period.png) 0 3px no-repeat
-      .context
-        background: url(/images/projects/team.png) 0 4px no-repeat
-      &:last-child
-        padding-bottom: 0
-      &.invert
-        .info
-          +float-left
-        .meta
-          +float-right
-#footer
-  background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
-  overflow: auto
-  color: $bg-color
-  #footwrap
-    +clearfix
-    width: $wide-width
-    margin: 1.5em auto
-  .external li
-    list-style: none
-  a
-    +hover-link
-    +link-colors($medium-color, $spot-color)
-    &.twitter
-      background: url(../images/twitter_logo.png) 0 50% no-repeat
-      padding: 5px 0 5px 40px
-      display: block
-    &.facebook
-      background: url(../images/facebook_logo.png) 4px 50% no-repeat
-      padding: 5px 0 5px 40px
-      display: block
-  .col
-    +min-width(215px)
-    float: left
-    margin: 0 0 0 36px
-  h3
-    font-family: TitilliumText22LLight
-    margin: 0 0 7px 0
-    font-weight: normal
-    color: white
-  #kontakt
-    margin-left: 0
-  #facebook
-    width: 295px
-    iframe
-      border: none
-      overflow: hidden
-      width: 295px
-      height: 170px
 
 #seam
   +clearfix
