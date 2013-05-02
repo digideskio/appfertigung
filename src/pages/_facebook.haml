@@ -1,0 +1,12 @@
+#fb-root
+  :javascript
+    window.fbAsyncInit = function() {
+      FB.init({ appId: '172304702813059', xfbml: true });
+    };
+    (function() {
+      var e = document.createElement('script');
+      e.src = document.location.protocol + '//connect.facebook.net/de_DE/all.js';
+      e.async = true;
+      document.getElementById('fb-root').appendChild(e);
+    }());
+%fb:fan{ :profile_id => 172304702813059, :connections => 5, :stream => 0, :logobar => 0, :width => 295, :height => 170, :css => "http://appfertigung.com/stylesheets/facebook.css?11" }
