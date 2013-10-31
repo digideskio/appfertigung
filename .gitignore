@@ -6,3 +6,5 @@ site/stylesheets/*
 .sass-cache
 .livereload
 .rvmrc
+
+/build/
