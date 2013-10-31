@@ -6,7 +6,6 @@
 $(document).ready(function(){
   var getOffset = function(){
     offset =  ($('#navbar').height() + 10)
-    console.log(offset);
     return offset;
   };
   $('body,html,document').scrollspy({target: '#navbar', offset: getOffset  } );
