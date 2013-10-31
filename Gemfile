@@ -1,8 +1,8 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem "rake"
-gem "staticmatic"
+gem 'middleman'
+gem 'middleman-livereload'
+gem 'slim'
 gem 'compass'
-gem "compass-colors"
-gem "rdiscount"
+gem 'compass-colors'
 

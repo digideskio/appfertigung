@@ -1,0 +1,99 @@
+#header
+  padding-top: $base-gap*3
+  +phone
+    padding-top: $base-gap
+
+#logo
+  display: block
+  text-align: center
+  img
+    +phone
+      min-width: 80%
+      max-width: 90%
+
+.nav-toggle
+  display: none
+  +phone
+    display: block
+  width: $font-size*2
+  height: $font-size*1.6
+  +border-radius(2px)
+  +background-image(linear-gradient(lighten($dark-color, 6%), lighten($dark-color, 12%)))
+  +box-shadow( lighten($dark-color, 18%) 0 0 2px 1px inset)
+  float: right
+  text-align: center
+  margin:
+    right: $base-gap
+    top: $base-gap
+    bottom: $base-gap
+  > .line
+    display: block
+    width: 70%
+    height: 2px
+    +border-radius(2px)
+    overflow: hidden
+    margin: 3px auto
+    background-color: $spot-color
+
+#navbar
+  +dropshadow
+  position: fixed
+  z-index: 5
+  top: 0
+  left: 0
+  width: 100%
+  text-align: center
+  color: #fff
+  background: $dark-color url(../images/stitch_blue.png) -3px bottom repeat-x
+  font-family: GentiumBasic
+  font-weight: 700
+
+  .nav-wrap
+    width: $main-width
+    margin: 0 auto
+  a.nav-brand
+    display: inline-block
+    float: left
+    width: 21px
+    height: 24px
+    margin: 0 $base-gap $base-gap
+    text-indent: -999em
+    background: url(../images/avatar_header.png) no-repeat
+    opacity: 0
+    +phone
+      display: block
+      float: none
+      margin: $base-gap auto
+      position: absolute
+      left: 1em
+      top: 0
+  ul.nav
+    +phone
+      display: none
+      left: 0
+      margin: $base-gap 0 $base-gap 0
+    +horizontal-list
+    list-style: none
+    margin: $base-gap 0 $base-gap/3 0
+    li
+      margin: 0 $base-gap*3
+      +phone
+        display: block
+        float: none
+        width: 100%
+        padding: 0.3em
+      a
+        +transition-property(all)
+        +transition-duration(0.15s)
+        margin: 0
+        border: 0
+        font-weight: normal
+        color: #FFF
+        line-height: 1.5
+        text-decoration: none
+        &:focus, &:hover, &:active
+          color: #ccc
+      &.current, &.active
+        a
+          border-bottom: 1px solid #ccc
+

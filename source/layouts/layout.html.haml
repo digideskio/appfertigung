@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title Appfertigung, Software-Entwicklung mit Ruby on Rails, JavaScript und HTML5
+    %meta{ content: 'text/html; charset=UTF-8', :'http-equiv' => 'Content-Type' }
+    %meta{ content: 'tHpclBS6Y8EXfbRePIIi2tBRaof6Kkmw2mREs2ejtZg', name: "google-site-verification" }
+    %meta{ content: 'Die Appfertigung entwickelt Software für das Web - mit Ruby on Rails, JavaScript und HTML5', name: "description" }
+    %meta{ content: 'Softwareentwicklung,Webentwicklung,Software,Entwicklung,Entwickler,Beratung,Ruby,Rails,Ruby on Rails,Ruby on Rails Entwickler,JavaScript,HTML5,CSS3,iOS,Mobile', name: "keywords" }
+    %meta{ content: 'width=device-width, height=device-height, initial-scale=1.0', name: 'viewport' }
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "print", media: 'print'
+
+    /[if IE]
+      = stylesheet_link_tag "ie"
+      = javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js"
+  %body#appfertigung
+    = partial('header')
+    #main
+      = yield
+    = partial('footer')
+
+    = # javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"
+    // Fallback when CDN fails / offline mode
+    = javascript_include_tag 'vendor/jquery.min.js', 'vendor/jquery-ui.min.js', 'all'
+    = partial('google_analytics')

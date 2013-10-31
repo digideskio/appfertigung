@@ -1,0 +1,19 @@
+
+#main
+  padding-bottom: 3em
+  +phone
+    margin: 0 10px
+  a
+    +hover-link
+    +link-colors($heading-color, $dark-color)
+
+#seam
+  +clearfix
+  height: 7px
+  background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
+
+// Suppress line breaks in iPhone
++phone
+  section, #intro,
+  section#team ul > li.member
+    width: auto

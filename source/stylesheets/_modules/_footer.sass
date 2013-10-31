@@ -1,0 +1,48 @@
+#footer
+  background: $dark-color url(../images/stitch_blue.png) 0 3px repeat-x
+  overflow: auto
+  color: $bg-color
+  #footwrap
+    +clearfix
+    width: $main-width
+    +phone
+      width: auto
+      padding: 1.5em
+    margin: 1.5em auto
+  .external li
+    list-style: none
+  a
+    +hover-link
+    +link-colors($medium-color, $spot-color)
+    &.twitter
+      background: url(../images/twitter_logo.png) 0 50% no-repeat
+      padding: 5px 0 5px 40px
+      display: block
+    &.facebook
+      background: url(../images/facebook_logo.png) 4px 50% no-repeat
+      padding: 5px 0 5px 40px
+      display: block
+  .col
+    +min-width(285px)
+    float: left
+    margin: 0 0 0 36px
+    +phone
+      +min-width(0)
+      width: 100%
+      float: none
+      +clearfix
+      margin: $base-gap 0
+  h3
+    font-family: TitilliumText22LLight
+    margin: 0 0 7px 0
+    font-weight: normal
+    color: white
+  #kontakt
+    margin-left: 0
+  #facebook
+    width: 295px
+    iframe
+      border: none
+      overflow: hidden
+      width: 295px
+      height: 170px

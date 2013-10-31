@@ -1,19 +1,11 @@
-Hey,
+Appfertigung.com
+================
 
-das hier ist ein Startpunkt für eine kleine, statische Website mit Staticmatic.
-
-ggf. RVM-Environment anlegen,
-bundler laufen lassen, 
-$ rake preview
-
-und los gehts!
+Die kleine, Middleman-basierte Webseite der Entwicklergemeinschaft "Die Appfertigung".
 
 
-HAML, SASS, Compass und jQuery sind integriert.
-Außerdem wird ein awesome-fontstack verwendet.
 
-Ein paar Anregungen und Ideen kann man z.B. noch hier klauen
-https://github.com/adamstac/staticmatic-bootstrap
+
 
 
 

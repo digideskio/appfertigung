@@ -1,0 +1,90 @@
+*
+  margin: 0
+  padding: 0
+  border: 0 solid
+  outline: 0
+
++reset-html5
+
+body
+  +font-metrics($base-font-size, $base-font-size*1.5)
+  height: 100%
+  padding-top: $nav-padding * 2
+  background: $bg-color url(../images/cloth_bg.png) 50% 0 repeat-y
+  font-family: GentiumBasic
+  color: $dark-color
+  +phone
+    +font-metrics($mobile-font-size, $mobile-font-size*1.5)
+    -webkit-overflow-scrolling: touch
+
+header
+  margin-bottom: $base-gap
+
+section
+  padding: $nav-padding*2 0
+  +phone
+    padding: $nav-padding 0
+    margin-left: 0
+  width: $main-width
+  margin: 0 auto
+  p:last-child
+    margin-bottom: 0
+
+h1, h2
+  +headline
+  font-size: $base-font-size*1.8
+  +phone
+    font-size: $base-font-size*1.4
+
+h1
+  text-align: center
+
+h2
+  +single-text-shadow(#fff, 0, 1px, 1px)
+  margin-bottom: $base-gap*2
+  text-align: center
+  &:before, &:after
+    font-size: 0.7em
+    vertical-align: text-bottom
+    color: $spot-color
+    content: "★"
+  &:before
+    padding-right: 15px
+  &:after
+    padding-left: 15px
+  +phone
+    &:before
+      padding-right: 4px
+    &:after
+      padding-left: 4px
+
+h3
+  font-weight: normal
+
+p
+  margin: 0 0 .75em 0
+  +phone
+    margin: 0
+
+ul
+  margin-left: 1.25em
+
+em
+  font-style: italic
+
+hr
+  border: 0
+  height: 3px
+  background-repeat: repeat-x
+  clear: both
+  &.red
+    background-image: url(../images/stitch_red.png)
+  &.blue
+    background-image: url(../images/stitch_blue.png)
+  &.gray
+    background-image: url(../images/stitch_gray.png)
+
+small a
+  text-decoration: none
+  &:after
+    content: " »"
