@@ -5,6 +5,8 @@ Bundler.setup
 ssh_user      = "appferti@cetus.uberspace.de" # for rsync deployment
 document_root = "/home/appferti/html" # for rsync deployment
 
+task :default => [:preview]
+
 desc "Run the preview server at http://localhost:4567"
 task :preview do
   system "middleman server"
