@@ -5,13 +5,12 @@
 
 $(document).ready(function(){
   var getOffset = function(){
-    offset =  ($('#navbar').height() + 10)
+    offset =  ($('#navbar').height());
     return offset;
   };
-  $('body,html,document').scrollspy({target: '#navbar', offset: getOffset  } );
+  $('body').scrollspy({target: '#navbar', offset: getOffset()+300  } );
 
   $('a[href*="#"]').click(function(event) {
-//    $('#navbar').css({position: 'absolute', background: 'green'})
     scrollPush(this.hash, event);
   });
 
@@ -26,7 +25,7 @@ $(document).ready(function(){
   });
 
   $('.nav-toggle').click(function(){
-    $('.nav').slideToggle(300)
-  })
+    $('.nav').slideToggle(300);
+  });
 
 });
